@@ -1,61 +1,215 @@
-body {
-    background-color: #111827;
-    color: white;
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: #1f2937;
-    text-align: center;
-    padding: 30px;
-    border-bottom: 2px solid #38bdf8;
+html {
+    scroll-behavior: smooth;
 }
 
-header h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-nav a {
-    color: #38bdf8;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-}
-
-nav a:hover {
-    color: white;
-}
-
-section {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 25px;
-    background-color: #1f2937;
-    border: 1px solid #374151;
-    border-radius: 15px;
-}
-
-h2 {
-    color: #38bdf8;
-    font-size: 28px;
-}
-
-h3 {
-    color: #93c5fd;
-}
-
-p {
-    font-size: 17px;
+body {
+    background: #070b14;
+    color: #f5f7ff;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
-#projects h3 {
+/* Navigation */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(7, 11, 20, 0.95);
+    border-bottom: 1px solid #263247;
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #38bdf8;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #dbeafe;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(circle at top, #172554 0%, #070b14 55%);
+}
+
+.tag {
+    color: #38bdf8;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 80px);
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.hero-text {
+    max-width: 650px;
+    color: #b8c2d6;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Button */
+
+.button {
+    display: inline-block;
+    background: #38bdf8;
+    color: #06101c;
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.25);
+}
+
+/* Sections */
+
+.section {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 40px 30px;
+}
+
+.section h2 {
+    color: #38bdf8;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.section > p {
+    color: #c5cede;
+    max-width: 750px;
+}
+
+/* Projects */
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: #111827;
+    border: 1px solid #263247;
+    border-radius: 14px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+}
+
+.project-card h3 {
+    color: #93c5fd;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #aeb9cc;
+}
+
+/* Skills */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
     margin-top: 25px;
 }
 
-section:hover {
-    border-color: #38bdf8;
+.skills div {
+    background: #111827;
+    border: 1px solid #263247;
+    padding: 12px 22px;
+    border-radius: 8px;
+    color: #dbeafe;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #263247;
+    color: #8290a8;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        margin: 50px auto;
+        padding: 30px 20px;
+    }
 }
