@@ -1,0 +1,61 @@
+body {
+    background-color: #111827;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1f2937;
+    text-align: center;
+    padding: 30px;
+    border-bottom: 2px solid #38bdf8;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #38bdf8;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 15px;
+}
+
+h2 {
+    color: #38bdf8;
+    font-size: 28px;
+}
+
+h3 {
+    color: #93c5fd;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+#projects h3 {
+    margin-top: 25px;
+}
+
+section:hover {
+    border-color: #38bdf8;
+}
